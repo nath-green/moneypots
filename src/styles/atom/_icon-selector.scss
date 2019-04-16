@@ -1,0 +1,9 @@
+.c-icon-selector {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__icons {
+    overflow-y: scroll;
+  }
+}

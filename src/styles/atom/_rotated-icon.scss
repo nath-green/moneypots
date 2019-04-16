@@ -1,0 +1,20 @@
+.c-rotated-icon {
+  $rotated-icon-size: 40px;
+  position: absolute;
+  left: calc(50% - 20px);
+  top: -$rotated-icon-size;
+  background-color: color(primary);
+  width: $rotated-icon-size;
+  height: $rotated-icon-size;
+  border-radius: $border-radius-x-large;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: color(white);
+  @include boxShadow();
+
+  &__icon {
+    transform: rotate(-45deg);
+  }
+}

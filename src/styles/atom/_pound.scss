@@ -1,0 +1,9 @@
+.c-pound {
+  &--minus {
+    &:before {
+      content: "\2212";
+      position: relative;
+      margin-right: 3px;
+    }
+  }
+}

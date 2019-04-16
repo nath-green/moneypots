@@ -1,0 +1,33 @@
+$border-radius: 4px;
+$border-radius-large: 7px;
+$border-radius-x-large: 10px;
+
+$body-settings: (
+  background-color: silver,
+  color: charcoal,
+  font-family: 'Open Sans',
+  font-size: $font-size-text
+);
+
+body {
+  @include span(1);
+  background-color: color(map-get($body-settings, background-color));
+  color: color(map-get($body-settings, color));
+  font-family: map-get($body-settings, font-family), sans-serif;
+  font-size: map-get($body-settings, font-size);
+}
+
+.u-flex {
+  display: flex;
+}
+
+.u-flex-space {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.u-overlap-above {
+  position: relative;
+  margin-top: -30px;
+}

@@ -1,0 +1,65 @@
+.c-money-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: $u-spacing $u-spacing $u-spacing-half $u-spacing;
+
+  &--with-background {
+    padding: $u-spacing $u-spacing $u-spacing-half $u-spacing;
+    background-color: color(white);
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  &--error {
+    border-color: color(error);
+  }
+
+  &__label {
+    font-size: $font-size-input;
+    color: color(pavement);
+  }
+
+  &__field-container {
+    display: inline-flex!important;
+    align-items: center;
+    font-size: 54px;
+    flex-direction: row;
+
+    &:before {
+      position: relative;
+      content: "£";
+      color: color(pavement);
+      font-size: 60%;
+      top: 3px;
+    }
+    .c-money-input--has-value & {
+      &:before {
+        color: color(error);
+      }
+    }
+    .c-money-input--success.c-money-input--has-value & {
+      &:before {
+        color: color(success);
+      }
+    }
+  }
+
+  &__field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: transparent;
+    font-size: 54px;
+    color: color(error);
+    border: none;
+    padding: 1px 0px;
+
+    .c-money-input--success & {
+      color: color(success);
+    }
+  }
+}

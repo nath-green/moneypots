@@ -1,0 +1,6 @@
+.c-label {
+  @include span(1);
+  margin-bottom: $u-spacing-quarter;
+  color: color(pavement);
+  font-size: $font-size-text-small;
+}

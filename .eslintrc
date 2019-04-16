@@ -1,0 +1,33 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "import/no-dynamic-require": "warn",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    "radix": ["error", "as-needed"],
+    "import/prefer-default-export": false,
+    "react/prop-types": false,
+    "no-underscore-dangle": 0,
+    "react/jsx-one-expression-per-line": false,
+    "import/no-named-as-default-member": false,
+    "jsx-a11y/label-has-for": [ 2, {
+      "required": {
+          "every": [ "id" ]
+      }
+    }],
+    "react/destructuring-assignment": [
+      "error",
+      "always",
+      {
+          "ignoreClassFields": true
+      }
+    ],
+    "react/no-array-index-key": false
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

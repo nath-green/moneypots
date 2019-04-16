@@ -1,0 +1,46 @@
+.nav-strip {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lighten(color(cloud), 2%);
+
+  @include media("height<620px") {
+    display: none;
+  }
+}
+
+.nav-strip-item {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  padding: $u-spacing-half 0;
+  text-transform: uppercase;
+  font-size: 10px;
+  cursor: pointer;
+
+  &__icon {
+    font-size: 22px;
+    margin-bottom: $u-spacing-quarter;
+    color: color(pavement);
+
+    .nav-strip-item--active & {
+      color: color(primary);
+    }
+  }
+
+  &__text {
+    color: color(pavement);
+    margin: 0;
+
+    .nav-strip-item--active & {
+      color: color(pavement);
+    }
+  }
+
+  &--active {
+    background-color: color(cloud);
+  }
+}

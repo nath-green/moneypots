@@ -1,0 +1,26 @@
+.c-progress {
+  position: relative;
+  height: 6px;
+  width: 100%;
+  border-radius: $border-radius-large;
+  overflow: hidden;
+  background-color: color(cloud);
+
+  &__percentage {
+    height: inherit;
+    position: absolute;
+    left: 0;
+
+    .c-progress--low & {
+      background-color: color(error);
+    }
+
+    .c-progress--med & {
+      background-color: color(warning);
+    }
+
+    .c-progress--high & {
+      background-color: color(success);
+    }
+  }
+}

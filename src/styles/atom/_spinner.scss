@@ -1,0 +1,57 @@
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+$spinner-size: 75px;
+$spinner-size-small: $spinner-size - 30px;
+$spinner-size-large: $spinner-size + 30px;
+
+.spinner-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  font-size: $spinner-size;
+
+  &:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+    margin-left: -0.5em;
+    margin-top: -0.5em;
+    border-radius: 50%;
+    border: 0.06em solid color(pavement);
+    border-top-color: color(primary);
+    animation: spinner 1.4s linear infinite;
+  }
+
+  &--small {
+    font-size: $spinner-size-small;
+  }
+
+  &--large {
+    font-size: $spinner-size-large;
+  }
+}
+
+.spinner-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(255, 255, 255, 1);
+}

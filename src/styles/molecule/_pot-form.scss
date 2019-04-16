@@ -1,0 +1,12 @@
+.c-pot-form {
+  &__row {
+    display: flex;
+  }
+
+  &__icon-selector {
+    height: 45px;
+    align-self: flex-end;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+}

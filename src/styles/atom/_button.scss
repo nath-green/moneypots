@@ -1,0 +1,58 @@
+.c-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: color(primary);
+  padding: 0 $u-spacing;
+  height: 40px;
+  border-radius: 20px;
+  color: white;
+  border: 2px solid transparent;
+  text-transform: uppercase;
+  font-size: $font-size-text-small;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &--error {
+    background-color: color(error);
+  }
+
+  &--success {
+    background-color: color(success);
+  }
+
+  &--ghost {
+    background-color: transparent;
+    border: 2px solid color(white);
+    color: color(white);
+
+    &.c-btn--primary {
+      border: 2px solid color(primary);
+      color: color(primary);
+    }
+
+    &.c-btn--error {
+      color: color(error);
+      border-color: color(error);
+    }
+  }
+
+  &--loading {
+    background-color: color(pavement);
+    cursor: not-allowed;
+  }
+
+  &--disabled {
+    background-color: color(pavement);
+    cursor: not-allowed;
+  }
+
+  &--full {
+    @include span(1);
+  }
+}

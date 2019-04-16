@@ -1,0 +1,62 @@
+.c-toggle {
+  @include span(1);
+  position: relative;
+  width: 100%;
+  color: color(ash);
+  font-size: $font-size-input;
+
+  &--with-background {
+    background-color: lighten(color(pavement), 11%);
+    @include boxShadow();
+    padding: $u-spacing-half+$u-spacing-quarter $u-spacing;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  &--divided {
+    border-bottom: 1px solid lighten(color(pavement), 7%);
+    padding-bottom: $u-spacing-half;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__slider {
+    position: relative;
+    height: 25px;
+    width: 50px;
+    background-color: color(pavement);
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 34px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 4px;
+      left: 4px;
+      background-color: color(white);
+      height: 17px;
+      width: 17px;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked {
+      + .c-toggle__slider {
+        background-color: color(success);
+
+        &:before {
+          transform: translateX(25px);
+        }
+      }
+    }
+  }
+}

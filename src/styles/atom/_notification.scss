@@ -1,0 +1,29 @@
+.c-notif {
+  margin-bottom: $u-spacing-quarter;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    display: flex;
+    font-size: 26px;
+
+    .c-notif--warning & {
+      color: color(warning);
+    }
+
+    .c-notif--error & {
+      color: color(error);
+    }
+
+    .c-notif--success & {
+      color: color(success);
+    }
+  }
+}

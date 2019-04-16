@@ -1,0 +1,23 @@
+.c-icon-card {
+  @include column(1/4, $cycle: 4, $gutter: 6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: color(white);
+  border-radius: $border-radius;
+  height: 59px;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: $u-spacing;
+  border: 2px solid transparent;
+  color: darken(color(ash), 10%);
+
+  &--selected {
+    border: 2px solid color(success);
+    color: color(success);
+  }
+
+  &--selectable {
+    border: 2px dashed lighten(color(primary), 15%);
+  }
+}

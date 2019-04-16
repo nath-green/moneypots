@@ -1,0 +1,36 @@
+.c-pot-overview {
+  color: color(ash);
+
+  &--warning {
+    color: color(warning);
+  }
+
+  &--error {
+    color: color(error);
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+  }
+
+  &__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: color(primary);
+    color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    font-size: $font-size-text;
+
+    .c-pot-overview--warning & {
+      background-color: color(warning);
+    }
+
+    .c-pot-overview--error & {
+      background-color: color(error);
+    }
+  }
+}

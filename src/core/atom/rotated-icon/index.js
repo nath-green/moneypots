@@ -1,0 +1,1 @@
+export { RotatedIcon } from './RotatedIcon';
