@@ -1,5 +1,5 @@
 # Moneypots
 
-Personal budgeting and finance PWA.
+Deployed in netlify: https://potsmoney.netlify.app
 
-Built using React ⚡ and Firebase 🔥.
+Doesn't work anymore with the build process so just copies and deploys the static assets from /dist
